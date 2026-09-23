@@ -1,0 +1,24 @@
+{
+  "kind": "human-design",
+  "title": "虛構：框架與自我反思共讀",
+  "sources": [
+    {
+      "id": "source-a",
+      "title": "自行選讀的合法來源（範例占位）",
+      "url": "https://example.org/reading",
+      "rights": "link and original summary only"
+    }
+  ],
+  "notes": [
+    {
+      "source_id": "source-a",
+      "claim_type": "interpretation",
+      "summary": "這是一段自行撰寫的合成反思示例，不代表科學結論。",
+      "question": "這個說法和自己的經驗有何相同或不同？",
+      "limitations": "單一個人反思不能支持普遍因果推論。"
+    }
+  ],
+  "consent_scope": "synthetic example only",
+  "birth_data_collected": false,
+  "data_classification": "synthetic"
+}
