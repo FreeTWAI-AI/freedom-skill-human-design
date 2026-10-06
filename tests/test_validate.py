@@ -16,6 +16,15 @@ class PlanValidation(unittest.TestCase):
     def test_synthetic_example_is_valid(self):
         self.assertEqual(module.validate(self.sample()), [])
 
+    def test_all_shipped_json_plans_are_valid(self):
+        for directory in ("templates", "examples"):
+            paths = sorted((ROOT / directory).rglob("*.json"))
+            self.assertTrue(paths, directory + " must contain JSON plans")
+            for path in paths:
+                with self.subTest(path=str(path.relative_to(ROOT))):
+                    data = json.loads(path.read_text(encoding="utf-8"))
+                    self.assertEqual(module.validate(data), [])
+
     def test_domain_constraint_is_enforced(self):
         bad = self.sample()
         bad['birth_data_collected'] = True
